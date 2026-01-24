@@ -22,5 +22,16 @@ public class Main{
 
     // In object (gọi toString)
     System.out.println(nv2);
+    System.out.println("---------------------------------------------------------------");
+    QuanLyNhanVien quanLyNhanVien = new QuanLyNhanVien();
+    NhanVien nv3 = new NhanVien("Ngo Luc", 21, "Khánh Hòa", 36000000, 200);
+    NhanVien nv4 = new NhanVien("Ngo Hung", 21, "Khánh Hòa", 36000000, 200);
+    NhanVien nv5= new NhanVien("Ngo Lam", 21, "Khánh Hòa", 36000000, 200);
+    quanLyNhanVien.them(nv1);
+    quanLyNhanVien.them(nv2);
+    quanLyNhanVien.them(nv3);
+    quanLyNhanVien.them(nv4);
+    quanLyNhanVien.them(nv5);
+    quanLyNhanVien.inDS();
   }
 }
