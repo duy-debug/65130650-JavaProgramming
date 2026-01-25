@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+abstract class ChuyenXe{
++ maSoChuyen: String
++ hoTenTaiXe: String
++ soXe: String
++ doanhThu: double
++ getDoanhThu(): double
++ {abstract}inThongTin(): void
+}
+class QuanLyChuyenXe{
++ danhSach: ArrayList<ChuyenXe>
++ themChuyenXe(cx : ChuyenXe) : void
++ xuatDanhSach() : void
++ tinhDoanhThuNoiThanh() : double
++ tinhDoanhThuNgoaiThanh() : double
++ tinhTongDoanhThu() : double
+}
+class ChuyenXeNoiThanh{
++ soTuyen
++ soKm
+}
+class ChuyenXeNgoaiThanh{
++ noiDen
++ soNgayDi
+}
+ChuyenXe <|-- ChuyenXeNgoaiThanh
+ChuyenXe <|-- ChuyenXeNoiThanh
+QuanLyChuyenXe "1" o-- "*" ChuyenXe
+@enduml
